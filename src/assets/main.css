@@ -1,0 +1,21 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  width: 75%;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  #app {
+    display: grid;
+    padding: 0 2rem;
+  }
+}
