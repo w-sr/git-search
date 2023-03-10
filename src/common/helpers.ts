@@ -14,7 +14,9 @@ export const containsDeep =
       return value.some(containsDeep(text))
     }
     if (valueType === 'object') {
-      return Object.values(value).some(containsDeep(text))
+      return Object.keys(value)
+        .map((el) => value[el])
+        .some(containsDeep(text))
     }
     return false
   }
